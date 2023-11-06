@@ -25,6 +25,7 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
 Cypress.Commands.add('login', function(userName,password){
+    cy.viewport(990,760)
     cy.visit('')
     cy.get('#input-email').type(userName)
     cy.get('#input-password').type(password)
