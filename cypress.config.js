@@ -11,5 +11,6 @@ module.exports = defineConfig({
   },
   env : {
     URL : "https://naveenautomationlabs.com/opencart/index.php?route=account/register"
-  }
+  },
+  "includeShadowDom" : true
 });
