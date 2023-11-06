@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "test:addToCartOnly": "npx cypress run --headed --spec cypress/e2e/tests/addToCart.cy.js"
+    "test:addToCartOnly": "npx cypress run --headed --spec cypress/e2e/tests/addToCart.cy.js",
+    "test:registrationOnly": "npx cypress run --headed --spec cypress/e2e/tests/registrationTest.cy.js"
   },
   "repository": {
     "type": "git",
