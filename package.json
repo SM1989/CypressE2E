@@ -5,8 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "test:addToCartOnly": "npx cypress run --headed --spec cypress/e2e/tests/addToCart.cy.js",
-    "test:registrationOnly": "npx cypress run --headed --spec cypress/e2e/tests/registrationTest.cy.js"
+    "test-prod:addToCartOnly": "npx cypress run --headed --spec cypress/e2e/tests/addToCart.cy.js --config-file prod.config.js",
+    "test-prod:registrationOnly": "npx cypress run --headed --spec cypress/e2e/tests/registrationTest.cy.js --config-file prod.config.js",
+    "test-prod:regression": "npx cypress run --headed --spec cypress/e2e/tests/*.js --config-file prod.config.js",
+    "test-stage:addToCartOnly": "npx cypress run --headed --spec cypress/e2e/tests/addToCart.cy.js --config-file stage.config.js",
+    "test-stage:registrationOnly": "npx cypress run --headed --spec cypress/e2e/tests/registrationTest.cy.js --config-file stage.config.js",
+    "test-stage:regression": "npx cypress run --headed --spec cypress/e2e/tests/*.js --config-file stage.config.js"
   },
   "repository": {
     "type": "git",
