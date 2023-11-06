@@ -1,0 +1,9 @@
+{
+    "login" : {
+        "userName" : "08smart@gmail.com",
+        "password" : "Saurabh@123"
+    },
+    "product" : "Macbook",
+    "successMessage" : "Success: You have added"
+
+}
