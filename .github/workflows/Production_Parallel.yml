@@ -1,4 +1,4 @@
-name: Production Parallel Execution
+name: Production_Parallel_Execution
 on: workflow_dispatch
 jobs:
   ParallelExecution1-run:

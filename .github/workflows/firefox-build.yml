@@ -1,4 +1,4 @@
-name: Regression Testing in Firefox browser
+name: Regression_Testing_Firefox
 on: push
 jobs:
   cypress-run:

@@ -1,4 +1,4 @@
-name: Staging Parallel Execution
+name: Staging_Parallel_Execution
 on: workflow_dispatch
 jobs:
   ParallelExecution1-run:
