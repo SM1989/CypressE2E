@@ -12,6 +12,7 @@ jobs:
         uses: cypress-io/github-action@v6
 
       - name: Cypress Test Report
+        if: always()
         uses: actions/upload-artifact@v3
         with:
           name: Mochawesome Test Report
