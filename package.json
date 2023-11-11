@@ -11,7 +11,8 @@
     "test-stage:addToCartOnly": "npx cypress run --headed --spec cypress/e2e/tests/addToCart.cy.js --config-file stage.config.js",
     "test-stage:registrationOnly": "npx cypress run --headed --spec cypress/e2e/tests/registrationTest.cy.js --config-file stage.config.js",
     "test-stage:regression": "npx cypress run --headed --spec cypress/e2e/tests/*.js --config-file stage.config.js",
-    "test-prod-api:regression": "npx cypress run --headed --spec cypress/e2e/tests/API/*.js --config-file prod-api.config.js"
+    "test-prod-api:regression": "npx cypress run --headed --spec cypress/e2e/tests/API/*.js --config-file prod-api.config.js",
+    "test-stage-api:regression": "npx cypress run --headed --spec cypress/e2e/tests/API/*.js --config-file stage-api.config.js"
   },
   "repository": {
     "type": "git",
