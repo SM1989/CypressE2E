@@ -1,5 +1,5 @@
-name: Staging_Regression
-on: workflow_dispatch
+name: UI_API_Generic_Build_Regression
+on: push
 jobs:
   cypress-run:
     runs-on: ubuntu-22.04
@@ -10,9 +10,6 @@ jobs:
       # and run all Cypress tests
       - name: Cypress run
         uses: cypress-io/github-action@v6
-        with:
-            command:
-                npm run test-stage:regression
 
       - name: Cypress Test Report
         if: always()

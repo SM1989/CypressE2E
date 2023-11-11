@@ -1,4 +1,4 @@
-name: Staging_Parallel_Execution
+name: UI_Production_Parallel_Execution
 on: workflow_dispatch
 jobs:
   ParallelExecution1-run:
@@ -11,14 +11,14 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
-            command: npm run test-stage:addToCartOnly
+            command: npm run test-prod-ui:addToCartOnly
 
       - name: Cypress Test Report
         if: always()
         uses: actions/upload-artifact@v3
         with:
           name: Mochawesome Test Report - 1
-          path: cypress/reports/html      
+          path: cypress/reports/html
 
   ParallelExecution2-run:
     runs-on: ubuntu-22.04
@@ -30,7 +30,7 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
-            command: npm run test-stage:registrationOnly
+            command: npm run test-prod-ui:registrationOnly
 
       - name: Cypress Test Report
         if: always()

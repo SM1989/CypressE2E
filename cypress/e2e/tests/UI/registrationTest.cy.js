@@ -1,6 +1,6 @@
-import { registrationPage } from "../../pages/registrationPage"
-import { afterRegistration } from "../../pages/afterRegistrationPage"
-import registrationData from "../../../cypress/fixtures/registrationData.json"
+import { registrationPage } from "../../../pages/registrationPage"
+import { afterRegistration } from "../../../pages/afterRegistrationPage"
+import registrationData from "../../../fixtures/registrationData.json"
 
 const registrationPageObj = new registrationPage()
 const afterRegistrationObj = new afterRegistration()

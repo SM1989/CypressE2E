@@ -1,5 +1,5 @@
-import { homePage } from "../../pages/homePage"
-import testData from "../../../cypress/fixtures/testData.json"
+import { homePage } from "../../../pages/homePage"
+import testData from "../../../fixtures/testData.json"
 const homePageObj = new homePage()
 
 describe ('Add To Cart Functionality', function(){

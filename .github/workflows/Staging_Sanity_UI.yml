@@ -1,4 +1,4 @@
-name: Staging_Sanity
+name: UI_Staging_Sanity
 on: workflow_dispatch
 jobs:
   cypress-run:
@@ -12,7 +12,7 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
             command:
-                npm run test-stage:registrationOnly
+                npm run test-stage-ui:registrationOnly
 
       - name: Cypress Test Report
         if: always()

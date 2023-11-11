@@ -1,4 +1,4 @@
-name: Production_Regression
+name: UI_Production_Regression
 on: workflow_dispatch
 jobs:
   cypress-run:
@@ -12,7 +12,7 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
             command:
-                npm run test-prod:regression
+                npm run test-prod-ui:regression
 
       - name: Cypress Test Report
         if: always()

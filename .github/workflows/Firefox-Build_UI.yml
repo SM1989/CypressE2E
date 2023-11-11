@@ -1,5 +1,5 @@
-name: Production_Sanity
-on: workflow_dispatch
+name: UI_API_Regression_Testing_Firefox
+on: push
 jobs:
   cypress-run:
     runs-on: ubuntu-22.04
@@ -11,8 +11,7 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
-            command:
-                npm run test-prod:registrationOnly
+            browser: firefox
 
       - name: Cypress Test Report
         if: always()

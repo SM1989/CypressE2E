@@ -1,5 +1,5 @@
-name: Generic_Build_Regression
-on: push
+name: UI_Production_Sanity
+on: workflow_dispatch
 jobs:
   cypress-run:
     runs-on: ubuntu-22.04
@@ -10,6 +10,9 @@ jobs:
       # and run all Cypress tests
       - name: Cypress run
         uses: cypress-io/github-action@v6
+        with:
+            command:
+                npm run test-prod-ui:registrationOnly
 
       - name: Cypress Test Report
         if: always()

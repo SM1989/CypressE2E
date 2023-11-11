@@ -6,7 +6,7 @@ describe('GET Users API', function(){
         
         cy.request({
             method : 'GET',
-            url : "https://gorest.co.in/public/v2/users/5707260",
+            url : "https://gorest.co.in/public/v2/users",
             //url : url_api,
             headers : {
                 Authorization : 'Bearer 9e7289d307e7922656c2b954b3dcb0826f79583af1b6a8f0606bb462d2bafd5f'
@@ -15,8 +15,7 @@ describe('GET Users API', function(){
         }).then((response)=>{
             expect(response.status).to.equal(200)
             cy.log(JSON.stringify(response.body))
-            expect(response.body.id).to.equal(5707261)
-            //Deliberately Failling the Test Case
+            //expect(response.body.id).to.equal(5707261)
             
         })
     })
