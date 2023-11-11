@@ -13,6 +13,12 @@ jobs:
         with:
             command: npm run test-stage:addToCartOnly
 
+      - name: Cypress Test Report
+        uses: actions/upload-artifact@v3
+        with:
+          name: Mochawesome Test Report - 1
+          path: cypress/reports/html      
+
   ParallelExecution2-run:
     runs-on: ubuntu-22.04
     steps:
@@ -24,3 +30,9 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
             command: npm run test-stage:registrationOnly
+
+      - name: Cypress Test Report
+        uses: actions/upload-artifact@v3
+        with:
+          name: Mochawesome Test Report - 2
+          path: cypress/reports/html

@@ -13,3 +13,9 @@ jobs:
         with:
             command:
                 npm run test-stage:registrationOnly
+
+      - name: Cypress Test Report
+        uses: actions/upload-artifact@v3
+        with:
+          name: Mochawesome Test Report
+          path: cypress/reports/html
