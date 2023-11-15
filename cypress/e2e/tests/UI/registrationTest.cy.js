@@ -1,6 +1,6 @@
 import { registrationPage } from "../../../pages/registrationPage"
 import { afterRegistration } from "../../../pages/afterRegistrationPage"
-import registrationData from "../../../fixtures/registrationData.json"
+import registrationData from "../../../fixtures/UI/registrationData.json"
 
 const registrationPageObj = new registrationPage()
 const afterRegistrationObj = new afterRegistration()

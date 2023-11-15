@@ -1,5 +1,5 @@
 import { homePage } from "../../../pages/homePage"
-import testData from "../../../fixtures/testData.json"
+import testData from "../../../fixtures/UI/testData.json"
 const homePageObj = new homePage()
 
 describe ('Add To Cart Functionality', function(){
