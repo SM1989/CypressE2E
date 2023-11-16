@@ -4,7 +4,7 @@ import successfulUserCreationSchema from '../../../fixtures/API/Schemas/successf
 import unsuccessfulUserCreationSchema from '../../../fixtures/API/Schemas/unsuccessfulUserCreation.json'
 const ajv = require('ajv')
 const ajvObj = new ajv()
-describe('POST Method Validation', function(){
+describe('API - POST Method Validation', function(){
 
     it('Create a User with hardcoded payload', function(){
 

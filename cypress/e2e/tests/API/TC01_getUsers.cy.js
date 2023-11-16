@@ -1,4 +1,4 @@
-describe('GET Users API', function(){
+describe('API - GET Users API', function(){
     var url_api = Cypress.config().baseUrl
 
     it('GET Users Response', function(){

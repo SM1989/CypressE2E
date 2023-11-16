@@ -2,7 +2,7 @@ import { homePage } from "../../../pages/homePage"
 import testData from "../../../fixtures/UI/testData.json"
 const homePageObj = new homePage()
 
-describe ('Add To Cart Functionality', function(){
+describe ('UI - Add To Cart Functionality', function(){
 
     before(function(){
         cy.login(testData.login.userName, testData.login.password)

@@ -3,7 +3,7 @@ import usersPayload from '../../../fixtures/API/Payloads/usersPayload.json'
 import updateUserPaylod from '../../../fixtures/API/Payloads/updateUserPayload.json'
 var userId
 
-describe('PUT Method Validation & API Chaining', function(){
+describe('API - PUT Method Validation', function(){
     
     it('Create User - POST', function(){
         cy.generateRandomEmail().then(function(randomEmail){

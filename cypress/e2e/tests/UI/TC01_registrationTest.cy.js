@@ -5,7 +5,7 @@ import registrationData from "../../../fixtures/UI/registrationData.json"
 const registrationPageObj = new registrationPage()
 const afterRegistrationObj = new afterRegistration()
 
-describe ('Registration Flow', function(){
+describe ('UI - Registration Flow', function(){
 
     function generateRandomEmail(){
         const randomString = Math.random().toString(36).substring(2,10);

@@ -3,7 +3,7 @@ import usersPayload from '../../../fixtures/API/Payloads/usersPayload.json'
 import updateUserPayload from '../../../fixtures/API/Payloads/updateUserPayload.json'
 var userId
 
-describe('Delete Method Validation & API Chaining', function () {
+describe('API - Delete Method Validation & API Chaining', function () {
     it('End To End Users Flow - GET/POST/PUT/DELETE', function () {
         cy.generateRandomEmail().then(function (randomEmail) {
             usersPayload.email = randomEmail
