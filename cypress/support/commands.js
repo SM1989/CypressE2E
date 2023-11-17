@@ -24,44 +24,83 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
-Cypress.Commands.add('login', function(userName,password){
-    cy.viewport(990,760)
+Cypress.Commands.add('login', function (userName, password) {
+    cy.viewport(990, 760)
     cy.visit('')
     cy.get('#input-email').type(userName)
     cy.get('#input-password').type(password)
     cy.get('form > .btn').click()
 })
 
-Cypress.Commands.add('getAPI', function(path_param,api_headers){
+Cypress.Commands.add('getAPI', function (path_param, api_headers) {
     cy.request({
-        method : 'GET',
-        url : Cypress.env('api_baseUrl')+path_param,
-        headers : api_headers,
+        method: 'GET',
+        url: Cypress.env('api_baseUrl') + path_param,
+        headers: api_headers,
         failOnStatusCode: false
     })
 })
-Cypress.Commands.add('postAPI',function(path_param,api_headers,payload){
+Cypress.Commands.add('postAPI', function (path_param, api_headers, payload) {
     cy.request({
-        method : 'POST',
-        url : Cypress.env('api_baseUrl')+path_param,
-        headers : api_headers,
-        body : payload,
+        method: 'POST',
+        url: Cypress.env('api_baseUrl') + path_param,
+        headers: api_headers,
+        body: payload,
         failOnStatusCode: false
     })
 })
-Cypress.Commands.add('putAPI', function(path_param,api_headers,payload){
+Cypress.Commands.add('putAPI', function (path_param, api_headers, payload) {
     cy.request({
-        method : 'PUT',
-        url : Cypress.env('api_baseUrl')+path_param,
-        body : payload,
-        headers : api_headers,
+        method: 'PUT',
+        url: Cypress.env('api_baseUrl') + path_param,
+        body: payload,
+        headers: api_headers,
         failOnStatusCode: false
     })
 })
-Cypress.Commands.add('deleteAPI', function(path_param,api_headers){
+Cypress.Commands.add('deleteAPI', function (path_param, api_headers) {
     cy.request({
-        method : 'DELETE',
-        url : Cypress.env('api_baseUrl')+path_param,
+        method: 'DELETE',
+        url: Cypress.env('api_baseUrl') + path_param,
+        headers: api_headers,
+        failOnStatusCode: false
+    })
+})
+
+/////////////GENERIC METHODS//////////////
+Cypress.Commands.add('postRequest', function (url, path_param, api_headers, param_type, payload) {
+    if (param_type == 'form') {
+        cy.request({
+            method: 'POST',
+            form: true,
+            url: url + path_param,
+            body: payload,
+            failOnStatusCode: false
+        })
+    }
+    else if (param_type == 'body') {
+        cy.request({
+            method: 'POST',
+            url: url + path_param,
+            headers: api_headers,
+            body: payload,
+            failOnStatusCode: false
+        })
+    }
+    else if (param_type == '') {
+        cy.request({
+            method: 'POST',
+            url: url + path_param,
+            headers: api_headers,
+            failOnStatusCode: false
+        })
+    }
+})
+
+Cypress.Commands.add('getRequest',function(url, path_param, api_headers){
+    cy.request({
+        method: 'GET',
+        url: url + path_param,
         headers : api_headers,
         failOnStatusCode: false
     })
