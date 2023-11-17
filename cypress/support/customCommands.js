@@ -15,13 +15,3 @@ Cypress.Commands.add('validateJsonSchema', function(responseBody,schema){
     cy.log(isValid)
     return cy.wrap(isValid)
 })
-
-// Cypress.Commands.add('validateResponse',(response,responseCode,identifierName,identifierValue) =>{
-//     if(
-//     expect(response.status).to.equal(responseCode)
-//     expect(response.body).has.property(identifierName,identifierValue)
-//     return true;
-//     )
-//     else: 
-
-// })

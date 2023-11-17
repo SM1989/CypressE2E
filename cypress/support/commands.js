@@ -31,3 +31,38 @@ Cypress.Commands.add('login', function(userName,password){
     cy.get('#input-password').type(password)
     cy.get('form > .btn').click()
 })
+
+Cypress.Commands.add('getAPI', function(path_param,api_headers){
+    cy.request({
+        method : 'GET',
+        url : Cypress.env('api_baseUrl')+path_param,
+        headers : api_headers,
+        failOnStatusCode: false
+    })
+})
+Cypress.Commands.add('postAPI',function(path_param,api_headers,payload){
+    cy.request({
+        method : 'POST',
+        url : Cypress.env('api_baseUrl')+path_param,
+        headers : api_headers,
+        body : payload,
+        failOnStatusCode: false
+    })
+})
+Cypress.Commands.add('putAPI', function(path_param,api_headers,payload){
+    cy.request({
+        method : 'PUT',
+        url : Cypress.env('api_baseUrl')+path_param,
+        body : payload,
+        headers : api_headers,
+        failOnStatusCode: false
+    })
+})
+Cypress.Commands.add('deleteAPI', function(path_param,api_headers){
+    cy.request({
+        method : 'DELETE',
+        url : Cypress.env('api_baseUrl')+path_param,
+        headers : api_headers,
+        failOnStatusCode: false
+    })
+})

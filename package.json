@@ -5,14 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "test-prod-ui:addToCartOnly": "npx cypress run --headed --spec cypress/e2e/tests/UI/addToCart.cy.js --config-file prod.config.js",
-    "test-prod-ui:registrationOnly": "npx cypress run --headed --spec cypress/e2e/tests/UI/registrationTest.cy.js --config-file prod.config.js",
-    "test-prod-ui:regression": "npx cypress run --headed --spec cypress/e2e/tests/UI/*.js --config-file prod.config.js",
-    "test-stage-ui:addToCartOnly": "npx cypress run --headed --spec cypress/e2e/tests/UI/addToCart.cy.js --config-file stage.config.js",
-    "test-stage-ui:registrationOnly": "npx cypress run --headed --spec cypress/e2e/tests/UI/registrationTest.cy.js --config-file stage.config.js",
-    "test-stage-ui:regression": "npx cypress run --headed --spec cypress/e2e/tests/UI/*.js --config-file stage.config.js",
-    "test-prod-api:regression": "npx cypress run --headed --spec cypress/e2e/tests/API/*.js --config-file prod-api.config.js",
-    "test-stage-api:regression": "npx cypress run --headed --spec cypress/e2e/tests/API/*.js --config-file stage-api.config.js"
+    "test-prod-ui:addToCartOnly": "npx cypress run --headless --spec cypress/e2e/tests/UI/*addToCart.cy.js --config-file prod.config.js",
+    "test-prod-ui:registrationOnly": "npx cypress run --headless --spec cypress/e2e/tests/UI/*registrationTest.cy.js --config-file prod.config.js",
+    "test-prod-ui:regression": "npx cypress run --headless --spec cypress/e2e/tests/UI/*.js --config-file prod.config.js",
+    "test-stage-ui:addToCartOnly": "npx cypress run --headless --spec cypress/e2e/tests/UI/*addToCart.cy.js --config-file stage.config.js",
+    "test-stage-ui:registrationOnly": "npx cypress run --headless --spec cypress/e2e/tests/UI/*registrationTest.cy.js --config-file stage.config.js",
+    "test-stage-ui:regression": "npx cypress run --headless --spec cypress/e2e/tests/UI/*.js --config-file stage.config.js",
+    "test-prod-api:regression": "npx cypress run --headless --spec cypress/e2e/tests/API/*.js --config-file prod-api.config.js",
+    "test-stage-api:regression": "npx cypress run --headless --spec cypress/e2e/tests/API/*.js --config-file stage-api.config.js"
   },
   "repository": {
     "type": "git",
