@@ -6,7 +6,7 @@ describe('OAuth Feature APIs', function(){
     const url = Cypress.env('api_authURL')
     const body = Cypress.env('credentials')
     var headers = '';
-    it('OAuth Token generation',function(){
+    beforeEach('OAuth Token generation',function(){
         cy.postRequest(url,'/token','','form',body).then(function(response){
             expect(response.status).to.be.equal(200)
             accessToken = response.body.access_token
