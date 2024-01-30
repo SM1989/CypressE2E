@@ -7,9 +7,12 @@ const afterRegistrationObj = new afterRegistration()
 
 describe ('UI - Registration Flow', function(){
 
+    before(function(){
+        registrationPageObj.openURL()
+    })
+
     it ('Registration 1st Use Case', function(){
         cy.generateRandomEmail().then(function(email){
-        registrationPageObj.openURL()
         registrationPageObj.enterFirstName(registrationData.firstName)
         registrationPageObj.enterLastName(registrationData.lastName)
         registrationPageObj.enterEmail(email)
